@@ -50,19 +50,6 @@ pod install
         
         DFVLInstance.initialize(success: { [weak self] viewController in
 
-            DFVLInstance.guidanceHeadingText = "Scan the Document."
-            DFVLInstance.guidanceHeadingTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            DFVLInstance.guidanceDescriptionTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-
-            DFVLInstance.regularFont = "Marker Felt"
-            DFVLInstance.boldFont = "Marker Felt"
-
-            DFVLInstance.guidanceContinueButtonBgColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
-            DFVLInstance.guidanceCancelButtonTextColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
-
-            DFVLInstance.guidanceBgColor =  #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 1)
-            DFVLInstance.videoVCGradientColor = #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 0.581255008)
-
             if let vc = viewController {
                 vc.delegate = self
                 let navVc = UINavigationController(rootViewController: vc)
@@ -137,7 +124,7 @@ Output would be:
 <br>
 <br>
 <p align="left">
-<img src="images/confi/user_guide.jpg" width="200"/> 
+<img src="images/confi/user_guide.jpg" width="200"/> </t>
 <img src="images/confi/screen_initialize.jpg" width="200"/>
 <img src="images/confi/record_video.jpg" width="200"/>
 
