@@ -20,7 +20,7 @@ pod 'DFLivelinessAuth'
 ```
 pod install
 ```
-
+<i> If any error occure in the process of `pod install` then try with `pod update` command.
 <i> Now close the xcode project and open prj.xcworkspace instead. </i>
 
 - Add the following keys in your 
@@ -69,7 +69,7 @@ pod install
                 self?.present(navVc, animated: true, completion: nil)
             }
             }, failure: { (error) in
-                print(error?.userInfo ?? "Your api token is not valid")
+                print(error?.userInfo)
         })
             
 
