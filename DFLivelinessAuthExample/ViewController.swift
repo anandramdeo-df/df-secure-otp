@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import VideoLivelinessFramework
+import DFLivelinessAuth
 
 class ViewController: UIViewController {
     
@@ -28,11 +28,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClick(_ sender: Any) {
-        let vc = GuidanceViewController.storyboardInstance()
-        vc?.delegate = self
-        vc?.messageText = "Please Speak numbers"
-        let navVc = UINavigationController(rootViewController: vc!)
-        present(navVc, animated: true, completion: nil)
+        let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
+
+        DFVLInstance.initialize(success: { [weak self] viewController in
+
+            DFVLInstance.guidanceHeadingText = "Scan the Document."
+            DFVLInstance.guidanceHeadingTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            DFVLInstance.guidanceDescriptionTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+
+            DFVLInstance.regularFont = "Marker Felt"
+            DFVLInstance.boldFont = "Marker Felt"
+
+            DFVLInstance.guidanceContinueButtonBgColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
+            DFVLInstance.guidanceCancelButtonTextColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
+
+            DFVLInstance.guidanceBgColor =  #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 1)
+            DFVLInstance.videoVCGradientColor = #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 0.581255008)
+
+            if let vc = viewController {
+                vc.delegate = self
+                let navVc = UINavigationController(rootViewController: vc)
+                self?.present(navVc, animated: true, completion: nil)
+            }
+            }, failure: { (error) in
+                print(error?.userInfo ?? "Your api token is not valid")
+        })
+
     }
     
     @IBAction func play(_ sender: Any) {

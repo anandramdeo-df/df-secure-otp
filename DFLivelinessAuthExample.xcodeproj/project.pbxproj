@@ -12,8 +12,6 @@
 		4127F847216E093300B19BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127F845216E093300B19BD7 /* Main.storyboard */; };
 		4127F849216E093400B19BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4127F848216E093400B19BD7 /* Assets.xcassets */; };
 		4127F84C216E093400B19BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127F84A216E093400B19BD7 /* LaunchScreen.storyboard */; };
-		C4A82D2E217091C700E24FE1 /* VideoLivelinessFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A82D2D217091C700E24FE1 /* VideoLivelinessFramework.framework */; };
-		C4A82D2F217091C700E24FE1 /* VideoLivelinessFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4A82D2D217091C700E24FE1 /* VideoLivelinessFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C4A82D2F217091C700E24FE1 /* VideoLivelinessFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,14 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4127F83E216E093300B19BD7 /* VideoCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4127F83E216E093300B19BD7 /* DFLivelinessAuthExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFLivelinessAuthExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4127F841216E093300B19BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4127F843216E093300B19BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4127F846216E093300B19BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4127F848216E093400B19BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4127F84B216E093400B19BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4127F84D216E093400B19BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4A82D2D217091C700E24FE1 /* VideoLivelinessFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VideoLivelinessFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A82D2E217091C700E24FE1 /* VideoLivelinessFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +51,7 @@
 		4127F835216E093300B19BD7 = {
 			isa = PBXGroup;
 			children = (
-				C4A82D2D217091C700E24FE1 /* VideoLivelinessFramework.framework */,
-				4127F840216E093300B19BD7 /* VideoCheck */,
+				4127F840216E093300B19BD7 /* DFLivelinessAuthExample */,
 				4127F83F216E093300B19BD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,12 +59,12 @@
 		4127F83F216E093300B19BD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4127F83E216E093300B19BD7 /* VideoCheck.app */,
+				4127F83E216E093300B19BD7 /* DFLivelinessAuthExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4127F840216E093300B19BD7 /* VideoCheck */ = {
+		4127F840216E093300B19BD7 /* DFLivelinessAuthExample */ = {
 			isa = PBXGroup;
 			children = (
 				4127F841216E093300B19BD7 /* AppDelegate.swift */,
@@ -80,15 +74,15 @@
 				4127F84A216E093400B19BD7 /* LaunchScreen.storyboard */,
 				4127F84D216E093400B19BD7 /* Info.plist */,
 			);
-			path = VideoCheck;
+			path = DFLivelinessAuthExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4127F83D216E093300B19BD7 /* VideoCheck */ = {
+		4127F83D216E093300B19BD7 /* DFLivelinessAuthExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4127F850216E093400B19BD7 /* Build configuration list for PBXNativeTarget "VideoCheck" */;
+			buildConfigurationList = 4127F850216E093400B19BD7 /* Build configuration list for PBXNativeTarget "DFLivelinessAuthExample" */;
 			buildPhases = (
 				4127F83A216E093300B19BD7 /* Sources */,
 				4127F83B216E093300B19BD7 /* Frameworks */,
@@ -99,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = VideoCheck;
+			name = DFLivelinessAuthExample;
 			productName = VideoCheck;
-			productReference = 4127F83E216E093300B19BD7 /* VideoCheck.app */;
+			productReference = 4127F83E216E093300B19BD7 /* DFLivelinessAuthExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4127F839216E093300B19BD7 /* Build configuration list for PBXProject "VideoCheck" */;
+			buildConfigurationList = 4127F839216E093300B19BD7 /* Build configuration list for PBXProject "DFLivelinessAuthExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4127F83D216E093300B19BD7 /* VideoCheck */,
+				4127F83D216E093300B19BD7 /* DFLivelinessAuthExample */,
 			);
 		};
 /* End PBXProject section */
@@ -306,7 +300,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = VideoCheck/Info.plist;
+				INFOPLIST_FILE = DFLivelinessAuthExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,7 +325,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = VideoCheck/Info.plist;
+				INFOPLIST_FILE = DFLivelinessAuthExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4127F839216E093300B19BD7 /* Build configuration list for PBXProject "VideoCheck" */ = {
+		4127F839216E093300B19BD7 /* Build configuration list for PBXProject "DFLivelinessAuthExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4127F84E216E093400B19BD7 /* Debug */,
@@ -358,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4127F850216E093400B19BD7 /* Build configuration list for PBXNativeTarget "VideoCheck" */ = {
+		4127F850216E093400B19BD7 /* Build configuration list for PBXNativeTarget "DFLivelinessAuthExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4127F851216E093400B19BD7 /* Debug */,
