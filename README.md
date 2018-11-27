@@ -124,7 +124,7 @@ Output would be:
 <br>
 <br>
 <p align="left">
-<img src="images/confi/user_guide.jpg" width="200"/> </t>
+<img src="images/confi/user_guide.jpg" width="200"/> &nbsp &nbsp &nbsp &nbsp 
 <img src="images/confi/screen_initialize.jpg" width="200"/>
 <img src="images/confi/record_video.jpg" width="200"/>
 
