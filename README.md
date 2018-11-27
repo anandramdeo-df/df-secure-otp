@@ -45,6 +45,66 @@ pod install
 - `import DFLivelinessAuth` in your `UIViewController` file where you want to use this feature.
 
 - And instantiate the view with following code.
+            
+        let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
+        
+        DFVLInstance.initialize(success: { [weak self] viewController in
+
+            DFVLInstance.guidanceHeadingText = "Scan the Document."
+            DFVLInstance.guidanceHeadingTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            DFVLInstance.guidanceDescriptionTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+
+            DFVLInstance.regularFont = "Marker Felt"
+            DFVLInstance.boldFont = "Marker Felt"
+
+            DFVLInstance.guidanceContinueButtonBgColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
+            DFVLInstance.guidanceCancelButtonTextColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
+
+            DFVLInstance.guidanceBgColor =  #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 1)
+            DFVLInstance.videoVCGradientColor = #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 0.581255008)
+
+            if let vc = viewController {
+                vc.delegate = self
+                let navVc = UINavigationController(rootViewController: vc)
+                self?.present(navVc, animated: true, completion: nil)
+            }
+        }, failure: { (error) in
+            print(error?.userInfo)
+        })
+        
+- You will get the result in delegate method, with `videoData` and `otp-status`:
+
+        // Result will be in the call-back delegate method
+        extension ViewController: GetRecordedVideo {
+            func recordedVideo(videoData: Data, status: Bool) {
+                if status {
+                    globalURL = URL(string: "")
+                    let tmpFileURL = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("video").appendingPathExtension("MP4")
+                    DispatchQueue.main.async {
+                        _ = (try? videoData.write(to: tmpFileURL, options: [.atomic])) != nil
+                    }
+
+                    globalURL = tmpFileURL
+                    self.showAlert("Speech to text for numbers is verified", title: "SUCCESS")
+                } else {
+                    self.showAlert("Speech to text for numbers is not verified", title: "FAILURE")
+                }
+                print("Spoken words are incorrect")
+            }
+        }
+
+Output would be:
+<br>
+<p align="left">
+<img src="images/DFLiveliness/user_guide.jpg" width="200"/> 
+<img src="images/DFLiveliness/screen_initialize.jpg" width="200"/>
+<img src="images/DFLiveliness/record_video.jpg" width="200"/>
+
+<br>
+<br>
+<b>You can cutomize the color and theme of the SDK's view according to your projects user-experience.</b> 
+
+<i>Just access the properties mentioned in the SDK. Have a look at the sample below:</i>
 
         let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
 
@@ -73,35 +133,13 @@ pod install
         })
             
 
-- You will get the result in delegate method, with `videoData` and `otp-status`:
-
-        // Result will be in the call-back delegate method
-        extension ViewController: GetRecordedVideo {
-            func recordedVideo(videoData: Data, status: Bool) {
-                if status {
-                    globalURL = URL(string: "")
-                    let tmpFileURL = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("video").appendingPathExtension("MP4")
-                    DispatchQueue.main.async {
-                        _ = (try? videoData.write(to: tmpFileURL, options: [.atomic])) != nil
-                        }
-
-                    globalURL = tmpFileURL
-                    self.showAlert("Speech to text for numbers is verified", title: "SUCCESS")
-                    } else {
-                    self.showAlert("Speech to text for numbers is not verified", title: "FAILURE")
-                    }
-                print("Spoken words are incorrect")
-            }
-        }
-
-
 <br>
 <br>
 <br>
 <p align="left">
-<img src="images/video-liveliness/user_guide.jpg" width="200"/> 
-<img src="images/video-liveliness/screen_initialize.jpg" width="200"/>
-<img src="images/video-liveliness/record_video.jpg" width="200"/>
+<img src="images/confi/user_guide.jpg" width="200"/> 
+<img src="images/confi/screen_initialize.jpg" width="200"/>
+<img src="images/confi/record_video.jpg" width="200"/>
 
 
 <h2>Here are the list of all the configurable properties, you may need:</h2>
