@@ -46,7 +46,7 @@ pod install
 
 - And instantiate the view with following code and this will also return the video data if user spoken correct words.
             
-        let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
+        let DFVLInstance = DFLivelinessAuth.sharedInstance
         
         DFVLInstance.getRecordedVideo(success: { (data, status) in
             if status {
