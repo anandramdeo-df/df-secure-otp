@@ -44,41 +44,20 @@ pod install
         
 - `import DFLivelinessAuth` in your `UIViewController` file where you want to use this feature.
 
-- And instantiate the view with following code.
+- And instantiate the view with following code and this will also return the video data if user spoken correct words.
             
         let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
         
-        DFVLInstance.initialize(success: { [weak self] viewController in
-
-            if let vc = viewController {
-                vc.delegate = self
-                let navVc = UINavigationController(rootViewController: vc)
-                self?.present(navVc, animated: true, completion: nil)
+        DFVLInstance.getRecordedVideo(success: { (data, status) in
+            if status {
+                // When user spoken correct words.
+            } else {
+                // When user spoken incorrect words.
             }
         }, failure: { (error) in
-            print(error?.userInfo)
+        // If user is unabel to authenticate or didn't provide API key.
+            print(error)
         })
-        
-- You will get the result in delegate method, with `videoData` and `otp-status`:
-
-        // Result will be in the call-back delegate method
-        extension ViewController: GetRecordedVideo {
-            func recordedVideo(videoData: Data, status: Bool) {
-                if status {
-                    globalURL = URL(string: "")
-                    let tmpFileURL = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("video").appendingPathExtension("MP4")
-                    DispatchQueue.main.async {
-                        _ = (try? videoData.write(to: tmpFileURL, options: [.atomic])) != nil
-                    }
-
-                    globalURL = tmpFileURL
-                    self.showAlert("Speech to text for numbers is verified", title: "SUCCESS")
-                } else {
-                    self.showAlert("Speech to text for numbers is not verified", title: "FAILURE")
-                }
-                print("Spoken words are incorrect")
-            }
-        }
 
 Output would be:
 <br>
@@ -93,30 +72,30 @@ Output would be:
 
 <i>Just access the properties mentioned in the SDK. Have a look at the sample below:</i>
 
-        let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
+        let DFVLInstance = DFLivelinessAuth.sharedInstance
 
-        DFVLInstance.initialize(success: { [weak self] viewController in
+        DFVLInstance.guidanceHeadingText = "Scan the Document."
+        DFVLInstance.guidanceHeadingTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        DFVLInstance.guidanceDescriptionTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 
-            DFVLInstance.guidanceHeadingText = "Scan the Document."
-            DFVLInstance.guidanceHeadingTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            DFVLInstance.guidanceDescriptionTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        DFVLInstance.regularFont = "Marker Felt"
+        DFVLInstance.boldFont = "Marker Felt"
 
-            DFVLInstance.regularFont = "Marker Felt"
-            DFVLInstance.boldFont = "Marker Felt"
+        DFVLInstance.guidanceContinueButtonBgColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
+        DFVLInstance.guidanceCancelButtonTextColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
 
-            DFVLInstance.guidanceContinueButtonBgColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
-            DFVLInstance.guidanceCancelButtonTextColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
+        DFVLInstance.guidanceBgColor =  #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 1)
+        DFVLInstance.videoVCGradientColor = #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 0.581255008)
 
-            DFVLInstance.guidanceBgColor =  #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 1)
-            DFVLInstance.videoVCGradientColor = #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 0.581255008)
-
-            if let vc = viewController {
-                vc.delegate = self
-                let navVc = UINavigationController(rootViewController: vc)
-                self?.present(navVc, animated: true, completion: nil)
+        DFVLInstance.getRecordedVideo(success: { (data, status) in
+            if status {
+                // When user spoken correct words.
+            } else {
+                // When user spoken incorrect words.
             }
-            }, failure: { (error) in
-                print(error?.userInfo)
+        }, failure: { (error) in
+        // If user is unabel to authenticate or didn't provide API key.
+            print(error)
         })
             
 
