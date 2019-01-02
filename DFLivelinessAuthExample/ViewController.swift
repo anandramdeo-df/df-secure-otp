@@ -30,28 +30,17 @@ class ViewController: UIViewController {
     @IBAction func onClick(_ sender: Any) {
         let DFVLInstance = DFLivelinessAuthConstant.sharedInstance
 
-        DFVLInstance.initialize(success: { [weak self] viewController in
-
-            DFVLInstance.guidanceHeadingText = "Scan the Document."
-            DFVLInstance.guidanceHeadingTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            DFVLInstance.guidanceDescriptionTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-
-            DFVLInstance.regularFont = "Marker Felt"
-            DFVLInstance.boldFont = "Marker Felt"
-
-            DFVLInstance.guidanceContinueButtonBgColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
-            DFVLInstance.guidanceCancelButtonTextColor = #colorLiteral(red: 0.4078431373, green: 0.7058823529, blue: 0.3647058824, alpha: 1)
-
-            DFVLInstance.guidanceBgColor =  #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 1)
-            DFVLInstance.videoVCGradientColor = #colorLiteral(red: 0.9098039216, green: 0.3921568627, blue: 0.3647058824, alpha: 0.581255008)
-
-            if let vc = viewController {
-                vc.delegate = self
-                let navVc = UINavigationController(rootViewController: vc)
-                self?.present(navVc, animated: true, completion: nil)
+        DFVLInstance.getRecordedVideo(success: { (data, status) in
+            if status {
+//                guard  let vc = self.storyboard?.instantiateViewController(withIdentifier: StoryBoard.Identifier.videoUploadGuidance) as? VideoUploadGuidance else { return }
+//                vc.videoData = data
+//                vc.verificationStatus = status
+//                self.navigationController?.pushViewController(vc, animated: true)
+            } else {
+             //   self.showAlert("Spoken words are incorrect, please try again.", .failure, nil)
             }
-            }, failure: { (error) in
-                print(error?.userInfo ?? "Your api token is not valid")
+        }, failure: { (error) in
+            print(error)
         })
 
     }
@@ -64,24 +53,6 @@ class ViewController: UIViewController {
             previewLayerView.layer.addSublayer(playerLayer)
             player.play()
         }
-    }
-}
-
-extension ViewController: GetRecordedVideo {
-    func recordedVideo(videoData: Data, status: Bool) {
-        if status {
-            globalURL = URL(string: "")
-            let tmpFileURL = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("video").appendingPathExtension("MP4")
-            DispatchQueue.main.async {
-                _ = (try? videoData.write(to: tmpFileURL, options: [.atomic])) != nil
-            }
-            
-            globalURL = tmpFileURL
-            self.showAlert("Speech to text for numbers is verified", title: "SUCCESS")
-        } else {
-            self.showAlert("Speech to text for numbers is not verified", title: "FAILURE")
-        }
-        print("Spoken words are incorrect")
     }
 }
 
