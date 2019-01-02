@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "DFLivelinessAuth"
   spec.version      = "1.0.1"
-  spec.summary      = "This SDK is created to capture a short video of user so that it could be sent to Datafornix server to check if the face in the video matches with the user's selfie or photo extracted from identity document."
+  spec.summary      = "This SDK is created to capture a short video of user to check if the face in the video matches with the user's selfie or photo extracted from identity document."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  spec.description  = "An OTP of numbers will appear on screen while recording video and user have to speak those words, after recording spoken numbers will be matched via Speech-to-Text processing."
+  spec.description  = "This SDK is created to capture a short video of user so that it could be sent to Datafornix server to check if the face in the video matches with the user's selfie or photo extracted from identity document. An OTP of numbers will appear on screen while recording video and user have to speak those words, after recording spoken numbers will be matched via Speech-to-Text processing."
 
   spec.homepage     = "https://github.com/anandramdeo-df/df-secure-otp"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
