@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "DFLivelinessAuth"
   spec.version      = "1.0.1"
-  spec.summary      = "This SDK is created to capture a short video of user to check if the face in the video matches with the user's selfie or photo extracted from identity document."
+  spec.summary      = "This SDK is created to capture a short video of user to check if the video matches with the user's photo extracted from identity document."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
