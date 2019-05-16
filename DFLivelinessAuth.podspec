@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "DFLivelinessAuth"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "This SDK is created to capture a short video of user to check if the video matches with the user's photo extracted from identity document."
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :http => 'https://github.com/anandramdeo-df/df-secure-otp/releases/download/1.0.1/DFLivelinessAuth.zip' }
+  spec.source       = { :http => 'https://github.com/anandramdeo-df/df-secure-otp/releases/download/1.0.2/DFLivelinessAuth.zip' }
   
   spec.ios.deployment_target = '10.0'
   spec.ios.vendored_frameworks = 'DFLivelinessAuth.framework'
