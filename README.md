@@ -41,7 +41,12 @@ pod install
         <key>NSSpeechRecognitionUsageDescription</key>
         <string>We need to access your speech recognizatio.</string>
         ```
-        
+    - Add an url of the server to communicate with the framework in your `Info.plist` file. Example:
+       ```xml
+        <key>server url</key>
+        <string>http://abc.com/api/</string>
+       ```
+    
 - `import DFLivelinessAuth` in your `UIViewController` file where you want to use this feature.
 
 - And instantiate the view with following code and this will also return the video data if user spoken correct words.
