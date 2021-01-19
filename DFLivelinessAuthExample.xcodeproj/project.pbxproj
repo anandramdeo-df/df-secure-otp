@@ -12,7 +12,7 @@
 		4127F847216E093300B19BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127F845216E093300B19BD7 /* Main.storyboard */; };
 		4127F849216E093400B19BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4127F848216E093400B19BD7 /* Assets.xcassets */; };
 		4127F84C216E093400B19BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127F84A216E093400B19BD7 /* LaunchScreen.storyboard */; };
-		67DE9EBD8B12BA322FB8771B /* Pods_DFLivelinessAuthExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A62F77ACD2657E9E3BF73C /* Pods_DFLivelinessAuthExample.framework */; };
+		C8E123B99718FEC4A04E92E8 /* Pods_DFLivelinessAuthExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D50560A5A0E4050629EEA4C /* Pods_DFLivelinessAuthExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,9 +36,9 @@
 		4127F848216E093400B19BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4127F84B216E093400B19BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4127F84D216E093400B19BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61E0B974C63554DA4C61BC55 /* Pods-DFLivelinessAuthExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFLivelinessAuthExample.release.xcconfig"; path = "Target Support Files/Pods-DFLivelinessAuthExample/Pods-DFLivelinessAuthExample.release.xcconfig"; sourceTree = "<group>"; };
-		BBDD304E409E03B12EE5D6FD /* Pods-DFLivelinessAuthExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFLivelinessAuthExample.debug.xcconfig"; path = "Target Support Files/Pods-DFLivelinessAuthExample/Pods-DFLivelinessAuthExample.debug.xcconfig"; sourceTree = "<group>"; };
-		C0A62F77ACD2657E9E3BF73C /* Pods_DFLivelinessAuthExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFLivelinessAuthExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D50560A5A0E4050629EEA4C /* Pods_DFLivelinessAuthExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFLivelinessAuthExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F599DFB56474C276EF2514 /* Pods-DFLivelinessAuthExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFLivelinessAuthExample.debug.xcconfig"; path = "Target Support Files/Pods-DFLivelinessAuthExample/Pods-DFLivelinessAuthExample.debug.xcconfig"; sourceTree = "<group>"; };
+		F8BC013F05EFEAF2463E7999 /* Pods-DFLivelinessAuthExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFLivelinessAuthExample.release.xcconfig"; path = "Target Support Files/Pods-DFLivelinessAuthExample/Pods-DFLivelinessAuthExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67DE9EBD8B12BA322FB8771B /* Pods_DFLivelinessAuthExample.framework in Frameworks */,
+				C8E123B99718FEC4A04E92E8 /* Pods_DFLivelinessAuthExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,10 +56,9 @@
 		2DE6BEF809C2FF80F0E69E36 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBDD304E409E03B12EE5D6FD /* Pods-DFLivelinessAuthExample.debug.xcconfig */,
-				61E0B974C63554DA4C61BC55 /* Pods-DFLivelinessAuthExample.release.xcconfig */,
+				92F599DFB56474C276EF2514 /* Pods-DFLivelinessAuthExample.debug.xcconfig */,
+				F8BC013F05EFEAF2463E7999 /* Pods-DFLivelinessAuthExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,7 +68,7 @@
 				4127F840216E093300B19BD7 /* DFLivelinessAuthExample */,
 				4127F83F216E093300B19BD7 /* Products */,
 				2DE6BEF809C2FF80F0E69E36 /* Pods */,
-				D258F03A5DE0D1CFBE48C8B9 /* Frameworks */,
+				EB15554067538338F6378A70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +93,10 @@
 			path = DFLivelinessAuthExample;
 			sourceTree = "<group>";
 		};
-		D258F03A5DE0D1CFBE48C8B9 /* Frameworks */ = {
+		EB15554067538338F6378A70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0A62F77ACD2657E9E3BF73C /* Pods_DFLivelinessAuthExample.framework */,
+				6D50560A5A0E4050629EEA4C /* Pods_DFLivelinessAuthExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,12 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4127F850216E093400B19BD7 /* Build configuration list for PBXNativeTarget "DFLivelinessAuthExample" */;
 			buildPhases = (
-				473EA92CEB1BC9FA162A0C4A /* [CP] Check Pods Manifest.lock */,
+				159A76B552C78ECA0BEAE55D /* [CP] Check Pods Manifest.lock */,
 				4127F83A216E093300B19BD7 /* Sources */,
 				4127F83B216E093300B19BD7 /* Frameworks */,
 				4127F83C216E093300B19BD7 /* Resources */,
 				4127F856216E097000B19BD7 /* Embed Frameworks */,
-				42814A7C1AA3738C3D411EF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,29 +170,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42814A7C1AA3738C3D411EF8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DFLivelinessAuthExample/Pods-DFLivelinessAuthExample-frameworks.sh",
-				"${PODS_ROOT}/DFLivelinessAuth/DFLivelinessAuth.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DFLivelinessAuth.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DFLivelinessAuthExample/Pods-DFLivelinessAuthExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		473EA92CEB1BC9FA162A0C4A /* [CP] Check Pods Manifest.lock */ = {
+		159A76B552C78ECA0BEAE55D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,7 +342,7 @@
 		};
 		4127F851216E093400B19BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBDD304E409E03B12EE5D6FD /* Pods-DFLivelinessAuthExample.debug.xcconfig */;
+			baseConfigurationReference = 92F599DFB56474C276EF2514 /* Pods-DFLivelinessAuthExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -374,9 +350,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DFLivelinessAuthExample",
 				);
 				INFOPLIST_FILE = DFLivelinessAuthExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,7 +369,7 @@
 		};
 		4127F852216E093400B19BD7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61E0B974C63554DA4C61BC55 /* Pods-DFLivelinessAuthExample.release.xcconfig */;
+			baseConfigurationReference = F8BC013F05EFEAF2463E7999 /* Pods-DFLivelinessAuthExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -400,9 +377,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DFLivelinessAuthExample",
 				);
 				INFOPLIST_FILE = DFLivelinessAuthExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

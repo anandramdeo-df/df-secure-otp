@@ -9,12 +9,13 @@
 import UIKit
 import AVFoundation
 import DFLivelinessAuth
+import Photos
 
 class ViewController: UIViewController {
     
     var player = AVPlayer()
     var playerLayer = AVPlayerLayer()
-    var globalURL = URL(string: "")
+    var globalURL: URL?
     @IBOutlet weak var previewLayerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +33,17 @@ class ViewController: UIViewController {
 
         DFVLInstance.getRecordedVideo(success: { (data, status) in
             if status {
-//                guard  let vc = self.storyboard?.instantiateViewController(withIdentifier: StoryBoard.Identifier.videoUploadGuidance) as? VideoUploadGuidance else { return }
-//                vc.videoData = data
-//                vc.verificationStatus = status
-//                self.navigationController?.pushViewController(vc, animated: true)
+                
+                guard var url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+                url.appendPathComponent("video.mp4") // or whatever extension the video is
+                do {
+                    try data.write(to: url, options: .atomic)
+                } catch {
+                }
+                self.globalURL = url
+                
             } else {
-             //   self.showAlert("Spoken words are incorrect, please try again.", .failure, nil)
+                self.showAlert("Spoken words are incorrect, please try again.", title: "")
             }
         }, failure: { (error) in
             print(error)
